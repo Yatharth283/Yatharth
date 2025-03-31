@@ -1,0 +1,379 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(16, 22, 71); /* Dark Blue */
+    color: rgb(224, 224, 224); /* Light Gray Text */
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Header */
+header h1 {
+    font-size: 28px;  /* Smaller for mobile */
+    font-weight: 600;
+    color: #FFD700; /* Gold - Expensive Look */
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+/* Headings */
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+/* Class Buttons */
+.class-buttons {
+    display: flex;
+    flex-direction: column;  /* Stacked for mobile */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Button Appearance Animation */
+.class-btn {
+    background: linear-gradient(90deg, #2196F3, #4FC3F7); /* Blue Gradient */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;  /* Optimized for mobile */
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    width: 90%;  /* Full-width on mobile */
+    max-width: 300px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Apply different delays to buttons */
+.class-btn:nth-child(1) { animation-delay: 0.3s; }
+.class-btn:nth-child(2) { animation-delay: 0.5s; }
+.class-btn:nth-child(3) { animation-delay: 0.7s; }
+.class-btn:nth-child(4) { animation-delay: 0.9s; }
+.class-btn:nth-child(5) { animation-delay: 1.1s; }
+
+/* Button Hover Effect */
+.class-btn:hover {
+    background: linear-gradient(90deg, #1976D2, #42A5F5);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.7);
+}
+
+/* About Section */
+.about {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInGlow 1.5s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+/* About Section Text */
+.about p {
+    font-size: 14px;  /* Smaller text for mobile */
+    color: rgb(200, 200, 200);
+    margin-bottom: 15px;
+}
+
+/* About Button */
+.about-btn {
+    background: #FF9800; /* Orange - Standout */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px; /* Mobile-optimized */
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* About Button Hover Effect */
+.about-btn:hover {
+    background: #F57C00;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+}
+
+/* ====== Animations ====== */
+
+/* Page Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header Slide In */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Buttons Fade In from Bottom */
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* About Section Glow Effect */
+@keyframes fadeInGlow {
+    from { opacity: 0; transform: scale(0.95); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0); }
+    to { opacity: 1; transform: scale(1); box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2); }
+}
+
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stylish Buttons */
+.nav-btn {
+    background: linear-gradient(90deg, #2196F3, #4FC3F7);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background: linear-gradient(90deg, #1976D2, #42A5F5);
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.8);
+}
+
+/* Back Button */
+.nav-btn.back {
+    background: linear-gradient(90deg, #FF9800, #F57C00);
+}
+
+.nav-btn.back:hover {
+    background: linear-gradient(90deg, #E65100, #FB8C00);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
+}
+
+/* Next Chapter Button */
+.nav-btn.next {
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+}
+
+.nav-btn.next:hover {
+    background: linear-gradient(90deg, #2E7D32, #43A047);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #007BFF;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+}
+
+h2, h3, h4 {
+    color: #00A3FF;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* General styling for dark mode */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #0044cc; /* Blue header */
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Content styling */
+.content {
+    padding: 20px;
+}
+
+/* FAQ Section Styling */
+.faq {
+    background-color: #1e1e1e; /* Dark grey for FAQs */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Navigation buttons */
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #0044cc; /* Blue buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #002a80; /* Darker blue on hover */
+}
+
+/* Feedback Section */
+.feedback {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e2e; /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #ffffff; /* White text */
+}
+
+.feedback h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00aaff; /* Bright blue heading */
+}
+
+#feedbackInput {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+    background: #2a2a3a; /* Darker input box */
+    color: #ffffff; /* White text */
+}
+
+#feedbackInput:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.7);
+}
+
+#submitFeedback {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#submitFeedback:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.feedback h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #00aaff; /* Bright blue heading */
+}
+
+#feedbackList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#feedbackList li {
+    background: #2a2a3a;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+    border-left: 4px solid #007bff;
+    color: #ffffff;
+}
